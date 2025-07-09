@@ -1,2 +1,5 @@
-SELECT *
+SELECT
+  C_ADDRESS,
+  C_CUSTKEY,
+  C_NAME
 FROM {{ source('sf1', 'CUST_ORDR') }}
