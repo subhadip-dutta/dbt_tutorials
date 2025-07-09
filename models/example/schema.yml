@@ -21,23 +21,23 @@ models:
     - name: customer_orders_passthrough
       description: "Passthrough model for CUSTOMER_ORDERS"
       columns:
-        - name: C_ADDRESS
-        - name: C_CUSTKEY
-        - name: C_NAME
+        - name: ID
+        - name: NAME
+        - name: STATUS
 
     - name: cust_ordr_passthrough
       description: "Passthrough model for CUST_ORDR"
       columns:
-        - name: C_ADDRESS
-        - name: C_CUSTKEY
-        - name: C_NAME
+        - name: ID
+        - name: NAME
+        - name: STATUS
 
     - name: combined_orders
       description: "Combines CUSTOMER_ORDERS and CUST_ORDR"
       columns:
-        - name: C_ADDRESS
-        - name: C_CUSTKEY
-        - name: C_NAME
+        - name: ID
+        - name: NAME
+        - name: STATUS
 
     - name: apexclass_transformation
       description: "Filters SF1_APEXCLASS for active rows"
@@ -49,9 +49,9 @@ models:
     - name: joined_orders_with_apexclass
       description: "Joins combined orders with SF1_APEXCLASS"
       columns:
-        - name: C_ADDRESS
-        - name: C_CUSTKEY
-        - name: C_NAME
+        - name: ID
+        - name: NAME
+        - name: STATUS
         - name: APEXCLASS_ID
         - name: APEXCLASS_NAME
 
@@ -63,16 +63,16 @@ sources:
       - name: CUSTOMER_ORDERS
         description: "Customer Orders table"
         columns:
-          - name: C_ADDRESS
-          - name: C_CUSTKEY
-          - name: C_NAME
+          - name: ID
+          - name: NAME
+          - name: STATUS
 
       - name: CUST_ORDR
         description: "Customer Orders duplicate table"
         columns:
-          - name: C_ADDRESS
-          - name: C_CUSTKEY
-          - name: C_NAME
+          - name: ID
+          - name: NAME
+          - name: STATUS
 
       - name: SF1_APEXCLASS
         description: "Salesforce Apex Class metadata"
