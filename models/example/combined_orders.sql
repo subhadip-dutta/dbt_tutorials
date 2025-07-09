@@ -1,13 +1,13 @@
 SELECT
-  ID,
-    NAME,
-    STATUS
-FROM {{ ref('customer_orders_passthrough') }}
+  co.ID,
+  co.NAME,
+  co.STATUS
+FROM {{ ref('customer_orders_passthrough') }} co
 
 UNION ALL
 
 SELECT
-  ID,
-    NAME,
-    STATUS
-FROM {{ ref('cust_ordr_passthrough') }}
+  c.ID,
+  c.NAME,
+  c.STATUS
+FROM {{ ref('cust_ordr_passthrough') }} c
