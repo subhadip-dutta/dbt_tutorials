@@ -1,5 +1,5 @@
 SELECT
-  C_ADDRESS,
-  C_CUSTKEY,
-  C_NAME
+  ID,
+    NAME,
+    STATUS
 FROM {{ source('sf1', 'CUSTOMER_ORDERS') }}
