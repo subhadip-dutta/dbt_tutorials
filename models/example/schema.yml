@@ -17,3 +17,80 @@ models:
             description: "The primary key for this table"
             tests:
                 - unique
+
+    - name: customer_orders_passthrough
+      description: "Passthrough model for CUSTOMER_ORDERS"
+      columns:
+        - name: C_ADDRESS
+        - name: C_CUSTKEY
+        - name: C_NAME
+
+    - name: cust_ordr_passthrough
+      description: "Passthrough model for CUST_ORDR"
+      columns:
+        - name: C_ADDRESS
+        - name: C_CUSTKEY
+        - name: C_NAME
+
+    - name: combined_orders
+      description: "Combines CUSTOMER_ORDERS and CUST_ORDR"
+      columns:
+        - name: C_ADDRESS
+        - name: C_CUSTKEY
+        - name: C_NAME
+
+    - name: apexclass_transformation
+      description: "Filters SF1_APEXCLASS for active rows"
+      columns:
+        - name: ID
+        - name: NAME
+        - name: STATUS
+
+    - name: joined_orders_with_apexclass
+      description: "Joins combined orders with SF1_APEXCLASS"
+      columns:
+        - name: C_ADDRESS
+        - name: C_CUSTKEY
+        - name: C_NAME
+        - name: APEXCLASS_ID
+        - name: APEXCLASS_NAME
+
+sources:
+  - name: sf1
+    database: ODS_CORE
+    schema: SF1
+    tables:
+      - name: CUSTOMER_ORDERS
+        description: "Customer Orders table"
+        columns:
+          - name: C_ADDRESS
+          - name: C_CUSTKEY
+          - name: C_NAME
+
+      - name: CUST_ORDR
+        description: "Customer Orders duplicate table"
+        columns:
+          - name: C_ADDRESS
+          - name: C_CUSTKEY
+          - name: C_NAME
+
+      - name: SF1_APEXCLASS
+        description: "Salesforce Apex Class metadata"
+        columns:
+          - name: APIVERSION
+          - name: BODY
+          - name: BODYCRC
+          - name: CREATEDBYID
+          - name: CREATEDDATE
+          - name: ID
+          - name: ISVALID
+          - name: LASTMODIFIEDBYID
+          - name: LASTMODIFIEDDATE
+          - name: LENGTHWITHOUTCOMMENTS
+          - name: MD_DYNAMIC_CHANGE_FLAG
+          - name: MD_INSERT_DATE
+          - name: MD_SOURCE
+          - name: NAME
+          - name: NAMESPACEPREFIX
+          - name: STATUS
+          - name: SYSTEMMODSTAMP
