@@ -1,13 +1,13 @@
 SELECT
-  C_ADDRESS,
-  C_CUSTKEY,
-  C_NAME
+  ID,
+    NAME,
+    STATUS
 FROM {{ ref('customer_orders_passthrough') }}
 
 UNION ALL
 
 SELECT
-  C_ADDRESS,
-  C_CUSTKEY,
-  C_NAME
+  ID,
+    NAME,
+    STATUS
 FROM {{ ref('cust_ordr_passthrough') }}
