@@ -17,3 +17,29 @@ models:
             description: "The primary key for this table"
             tests:
                 - unique
+
+sources:
+  - name: sf1
+    database: ODS_CORE
+    schema: SF1
+    tables:
+      - name: SF1_APEXCLASS
+        description: "Salesforce Apex Class metadata"
+        columns:
+          - name: APIVERSION
+          - name: BODY
+          - name: BODYCRC
+          - name: CREATEDBYID
+          - name: CREATEDDATE
+          - name: ID
+          - name: ISVALID
+          - name: LASTMODIFIEDBYID
+          - name: LASTMODIFIEDDATE
+          - name: LENGTHWITHOUTCOMMENTS
+          - name: MD_DYNAMIC_CHANGE_FLAG
+          - name: MD_INSERT_DATE
+          - name: MD_SOURCE
+          - name: NAME
+          - name: NAMESPACEPREFIX
+          - name: STATUS
+          - name: SYSTEMMODSTAMP
