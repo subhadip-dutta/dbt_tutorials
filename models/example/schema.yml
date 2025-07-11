@@ -25,33 +25,7 @@ sources:
     tables:
       - name: CUSTOMER_ORDERS
         description: "Customer Orders table"
-        columns:
-          - name: ID
-          - name: NAME
-          - name: STATUS
       - name: CUST_ORDR
         description: "Customer Orders duplicate table"
-        columns:
-          - name: ID
-          - name: NAME
-          - name: STATUS
       - name: SF1_APEXCLASS
         description: "Salesforce Apex Class metadata"
-        columns:
-          - name: APIVERSION
-          - name: BODY
-          - name: BODYCRC
-          - name: CREATEDBYID
-          - name: CREATEDDATE
-          - name: ID
-          - name: ISVALID
-          - name: LASTMODIFIEDBYID
-          - name: LASTMODIFIEDDATE
-          - name: LENGTHWITHOUTCOMMENTS
-          - name: MD_DYNAMIC_CHANGE_FLAG
-          - name: MD_INSERT_DATE
-          - name: MD_SOURCE
-          - name: NAME
-          - name: NAMESPACEPREFIX
-          - name: STATUS
-          - name: SYSTEMMODSTAMP
