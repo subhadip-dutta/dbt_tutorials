@@ -23,6 +23,12 @@ sources:
     database: ODS_CORE
     schema: SF1
     tables:
+      - name: CUSTOMER_ORDERS
+        description: "Customer Orders table"
+        columns:
+          - name: ID
+          - name: NAME
+          - name: STATUS
       - name: CUST_ORDR
         description: "Customer Orders duplicate table"
         columns:
