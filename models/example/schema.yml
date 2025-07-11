@@ -23,6 +23,12 @@ sources:
     database: ODS_CORE
     schema: SF1
     tables:
+      - name: CUST_ORDR
+        description: "Customer Orders duplicate table"
+        columns:
+          - name: ID
+          - name: NAME
+          - name: STATUS
       - name: SF1_APEXCLASS
         description: "Salesforce Apex Class metadata"
         columns:
