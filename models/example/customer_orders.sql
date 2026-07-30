@@ -2,7 +2,8 @@
     materialized='table'
 ) }}
 
-=======
+
+select
     ID,
     NAME,
     STATUS
