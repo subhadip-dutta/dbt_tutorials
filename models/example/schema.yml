@@ -17,3 +17,15 @@ models:
             description: "The primary key for this table"
             tests:
                 - unique
+
+sources:
+  - name: sf1
+    database: ODS_CORE
+    schema: SF1
+    tables:
+      - name: CUSTOMER_ORDERS
+        description: "Customer Orders table"
+      - name: CUST_ORDR
+        description: "Customer Orders duplicate table"
+      - name: SF1_APEXCLASS
+        description: "Salesforce Apex Class metadata"
